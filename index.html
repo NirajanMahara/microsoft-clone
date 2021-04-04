@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Microsoft - Official Home Page</title>
   </head>
 
@@ -45,21 +45,30 @@
         <!-- Right Menu Items -->
         <ul class="right-menu">
           <li>
-            <a href="#">All Microsoft <i class="fas fa-chevron-down"></i></a>
+            <a class="hide" href="#">All Microsoft </a>
+            <i class="fas fa-chevron-down"></i>
           </li>
           <li>
-            <a href="#">
-              <i class="fas fa-search"></i>
-            </a>
+            <a class="hide" href="#">Search </a>
+            <i class="fas fa-search"></i>
           </li>
 
           <li>
-            <a href="#">
-              <i class="fas fa-shopping-cart"></i>
-            </a>
+            <a class="hide" href="#">Cart </a>
+            <i class="fas fa-shopping-cart"></i>
+          </li>
+          <li>
+            <a class="hide" href="#">Sign In </a>
+            <i class="fas fa-user-circle"></i>
           </li>
         </ul>
       </nav>
+
+      <!-- Alert -->
+      <a href="#" class="corona-alert"
+        >Read how we're responding to the COVID-19 outbreak and get resources to
+        help<i class="fas fa-chevron-right"></i
+      ></a>
 
       <!-- Showcase -->
       <header class="showcase">
@@ -71,33 +80,34 @@
           >Shop Now <i class="fas fa-chevron-right"></i
         ></a>
       </header>
-      <!-- Featuring section -->
-      <!-- <section class="feature-cards">
+
+      <!-- Feature section -->
+      <section class="feature-cards">
         <div>
           <img src="./img/microsoft365.png" alt="Choose your Microsoft 365" />
-          <p>Choose your Microsoft 365</p>
+          <h4>Choose your Microsoft 365</h4>
         </div>
         <div>
           <img src="./img/surfacedevice.png" alt="Shop Surface Devices" />
-          <p>Shop Surface devices</p>
+          <h4>Shop Surface devices</h4>
         </div>
         <div>
           <img src="./img/xbox.png" alt="Buy Xbox games and consoles" />
-          <p>Buy Xbox games and consoles</p>
+          <h4>Buy Xbox games and consoles</h4>
         </div>
         <div>
-          <img src="./img/shopwindow.png" alt="Shop WIndow" />
-          <p>Shop Window</p>
+          <img src="./img/shopwindow.png" alt="Shop Window 10" />
+          <h4>Shop Window 10</h4>
         </div>
         <div>
           <img src="./img/nextpc.png" alt="Find your next PC" />
-          <p>Find your next PC</p>
+          <h4>Find your next PC</h4>
         </div>
         <div>
           <img src="./img/business.png" alt="Shop Business" />
-          <p>Shop Business</p>
+          <h4>Shop Business</h4>
         </div>
-      </section> -->
+      </section>
 
       <!-- Home Card Section I 1 -->
       <section class="home-cards">
@@ -216,10 +226,57 @@
         </div>
       </section>
 
+      <section class="microsoft365">
+        <div class="content">
+          <h1>New Microsoft 365</h1>
+          <p>
+            Achieve more with innovative Office apps.intelligent cloud services
+            and world-class security
+          </p>
+          <a class="btn" href="#"
+            >Read More <i class="fas fa-chevron-right"></i
+          ></a>
+        </div>
+      </section>
+
+      <!-- Home cards -->
+      <section class="home-cards">
+        <div>
+          <img src="./img/microsoft365.jpg" alt="" />
+          <h3>Microsoft 365</h3>
+          <p>Premium Office apps, extra cloud storage, advanced security</p>
+          <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <div>
+          <img src="./img/surface3.webp" alt="" />
+          <h3>Save up to $200 on Surface Laptop 3</h3>
+          <p>Rise above the ordinary with the ultimate in speed and style</p>
+          <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <div>
+          <img src="./img/surfacepro7.jpg" alt="" />
+          <h3>Surface Pro 7</h3>
+          <p>
+            Ultra-light and versatile, with faster processing and all day
+            battery life
+          </p>
+          <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
+        </div>
+
+        <div>
+          <img src="./img/xbox.jpg" alt="" />
+          <h3>Xbox Game Pass Ultimate</h3>
+          <p>Xbox Live Gold and over 100 high-quality console and PC games</p>
+          <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
+        </div>
+      </section>
+
       <!-- Carbon -->
       <section class="carbon dark">
         <div class="content">
-          <h2>Commiting To Carbon Negative</h2>
+          <h2>Committing To Carbon Negative</h2>
           <p>
             Microsoft will be carbon negative by 2030 and by 2050 we will remove
             all carbon the company has emitted since it was founded in 1975.
@@ -230,8 +287,8 @@
         </div>
       </section>
 
-      <!-- Fpllow -->
-      <section class="follow">
+      <!-- social -->
+      <section class="social">
         <p>Follow Microsoft</p>
         <a href="https://facebook.com">
           <img src="https://i.ibb.co/LrVMXNR/social-fb.png" alt="Facebook" />
@@ -309,7 +366,7 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-inner">
-        <div><i class="fas fa-globe fa-2x"></i>English {United States}</div>
+        <div><i class="fas fa-globe fa-2x"></i>English (United States)</div>
         <ul>
           <li><a href="#">Sitemap</a></li>
           <li><a href="#">Contact Microsoft</a></li>

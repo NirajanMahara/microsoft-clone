@@ -1,15 +1,24 @@
+/* Select All */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
+/* Body All */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #fff;
   color: #000;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.5;
+}
+
+/* Container Wrap */
+.container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
 }
 
 a {
@@ -21,12 +30,6 @@ ul {
   list-style: none;
 }
 
-.container {
-  width: 90%;
-  max-width: 1300px;
-  margin: auto;
-}
-
 /* Navigation */
 .main-nav {
   display: flex;
@@ -34,11 +37,17 @@ ul {
   justify-content: space-between;
   height: 60px;
   padding: 20px 0;
-  font-size: 13px;
+  font-size: 14px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
 }
 
 .main-nav .logo {
-  width: 110px;
+  width: 130px;
 }
 
 .main-nav ul {
@@ -79,11 +88,13 @@ ul {
   padding: 10px 20px;
   background: #262626;
   color: #fff;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .btn:hover {
   opacity: 0.9;
+  margin-left: 3px;
+  transition: margin-left 0.3s ease-in-out;
 }
 
 .dark {
@@ -93,6 +104,24 @@ ul {
 .dark .btn {
   background: #f4f4f4;
   color: #333;
+}
+/* Corona Alert */
+.corona-alert {
+  background-color: #0067bb;
+  color: #fff;
+  padding: 12px 36px;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  display: block;
+}
+
+.corona-alert:hover {
+  text-decoration: underline;
+}
+
+.corona-alert i {
+  padding-left: 6px;
 }
 
 /* Showcase header */
@@ -119,11 +148,21 @@ ul {
   margin-top: 20px;
 }
 /* Feature cards */
-/* .feature-cards {
+.feature-cards {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  margin-bottom: 20px;
+  grid-gap: 40px;
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  align-items: center;
+}
+
+.feature-cards div:hover{
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .feature-cards img {
@@ -137,7 +176,7 @@ ul {
   justify-content: space-around;
   text-align: center;
   font-weight: 600;
-} */
+}
 
 /* Home Cards */
 .home-cards {
@@ -145,13 +184,13 @@ ul {
   /* grid-template-columns: 50px 50px 50px 50px; */
   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  grid-gap: 15px;
   margin-bottom: 40px;
 }
 
 .home-cards img {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .home-cards h3 {
@@ -164,10 +203,16 @@ ul {
   color: #0067b8;
   text-transform: uppercase;
   font-weight: bold;
+
 }
 
-.home-cards a:hover i {
-  margin-left: 10px;
+.home-cards a:hover{
+  transition: 0.5s ease-in-out;
+  border-bottom: #0067b8 2px solid; 
+}
+
+.home-cards a:hover {
+  margin-left: 8px;
 }
 
 /* Xbox */
@@ -189,6 +234,34 @@ ul {
 .carbon p {
   margin: 10px 0 20px;
 }
+/* Microsoft 365 */
+.microsoft365 {
+  width: 100%;
+  height: 400px;
+  background: url("/img/microsoft356main.png") no-repeat center
+    center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+  justify-content: flex-end;
+  padding-bottom: 120px;
+  margin-bottom: 40px;
+}
+
+.microsoft365 .content {
+  margin-left: 30px;
+  width: 40%;
+}
+
+.microsoft365 .content h1,
+.microsoft365 .content p {
+  margin-bottom: 20px;
+}
+
+.microsoft365 .content h1 {
+  font-size: 30px;
+}
 
 /* Carbon */
 .carbon {
@@ -204,14 +277,14 @@ ul {
 }
 
 /* Follow */
-.follow {
+.social {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   margin: 30px 0 30px;
 }
 
-.follow * {
+.social * {
   margin-right: 10px;
 }
 
@@ -263,7 +336,7 @@ ul {
 }
 
 .footer div i {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .footer ul {
@@ -276,7 +349,14 @@ ul {
   margin-bottom: 20px;
 }
 
-@media (max-width: 700px) {
+/* Responsive */
+@media (max-width: 1100px) { 
+  .hide {
+  display: none;
+  }
+}
+
+@media (max-width: 750px) {
   .menu-btn {
     display: block;
   }
@@ -315,8 +395,17 @@ ul {
     border-bottom: 0;
   }
 
+
   .main-nav ul.main-menu.show {
     transform: translateX(-20px);
+  }
+
+  .corona-alert{
+    font-size: 12px;
+  }
+
+  .feature-cards {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .home-cards {
@@ -345,11 +434,21 @@ ul {
     grid-template-columns: 1fr;
   }
 
+  .feature-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .links .links-inner {
     grid-template-columns: 1fr;
   }
 
   .links .links-inner ul {
     margin-bottom: 20px;
+  }
+
+  .footer div{
+    justify-content: flex-start;
+    text-align: center;
+    flex-direction: column;
   }
 }
